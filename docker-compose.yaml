@@ -4,10 +4,9 @@ services:
     container_name: web
     image: heryfik/sosmed-web:${GIT_COMMIT_SHORT}
     ports:
-      - "8888:80"
+      - "80:80"
     depends_on:
       - db
   db:
     container_name: db
     image: heryfik/sosmed-db:${GIT_COMMIT_SHORT}
-    
