@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  web:
+    container_name: web
+    image: heryfik/web1:${GIT_COMMIT_SHORT}
+    ports:
+      - "80:80"
+    depends_on:
+      - db
+  db:
+    container_name: db
+    image: heryfik/db1:${GIT_COMMIT_SHORT}
+    
